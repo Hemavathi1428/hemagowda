@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <img src="./images/logoh.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#header">Portfolio</a></li>
+                <li><a href="#contact">contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>IT Student</p>
+            <h1>Hi, I'm <span>Hemavathi S</span></h1>
+            <p>From Bengaluru.</p>
+        </div>
+    </div>
+    </div> 
+<!-------------------------------------------ABOUT ME-------------------------------------------->
+    <div id="About">
+    <div class="container">
+        <div class="row">
+              <div class="about-col-1">
+                <img src="./images/1111.png">
+              </div>
+              <div class="about-col-2">
+                <h1 class="sub-title">ABOUT ME</h1>
+                <h5>I am a dedicated and enthusiastic IT student with a passion for exploring the intricate world of technology. Curiosity drives my learning as I delve into cloud computing, networking, web development, coding and system administration. With a good foundation in programming languages like C, Python and Java, I've embarked on projects that showcase my problem-solving prowess and creativity. My academic journey is enriched by hands-on experiences, including internships where I honed my skills in real-world settings. Eager to embrace emerging trends, I am committed to continuous growth, eagerly adapting to new challenges and contributing my knowledge to the dynamic realm of information technology.</h5>
+             <br><br><div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')" >Skills</p>
+                <p class="tab-links"onclick="opentab('Projects')" >Projects</p>
+                <p class="tab-links"onclick="opentab('Education')" >Education</p>
+                <p class="tab-links"onclick="opentab('Experience')" >Experience</p>
+             </div>
+             <div class="table-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>computer networking</span>
+                    
+                            
+                    <li><span>Web Development</span>
+                        
+                    <li><span>Cloud Computing</span>
+                         
+                    <li><span>Operating Systems</span>
+                         
+                    <li><span>SAP basics</span>
+                            
+                </ul>
+             </div>
+             <div class="table-contents" id="Projects">
+                <ul>
+                    <li><span>Anemia detection using Machine Learning</span>
+                        <br>Developed a machine laerning project with Logistic Regression -.</li>
+                    <li><span>School Management System</span>
+                        <br>Created file structures mini project with Python backend and Tkinter frontend.</li>
+                     <li><span>Aqua sports booking Management System</span>
+                         <br>Created DBMS mini project with java and oracle database to store the data in DBMS.</li>
+                    
+                </ul>
+             </div>
+             <div class="table-contents" id="Education">
+                <ul>
+                    <li><span>2020-2024</span>
+                        <br>B.E.in Information Science at Don Bosco Institute Of Technology,Bengaluru </li>
+                    <li><span>2018-2020 </span>
+                        <br>Class 12 in PCM + Biology from KLE Independent PU College,Bengaluru</li>
+                   <li><span>2018</span>
+                        <br>Class 10 from Arunodaya Convent School,Bengaluru</li>
+                </ul>
+             </div>
+             <div class="table-contents" id="Experience">
+                <ul>
+                    <li><span>08/2023-09/2023</span>
+                        <br>Web Development intern at Prinston Smart Engineers</li>
+                     <li><span>09/2022-10/2022</span>
+                         <br>Data Science intern at Adverk Technologies</li>
+                    <li><span>03/2021-06/2021</span>
+                        <br>Public Relation Member at Youth India Foundation</li>
+                   
+                </ul>
+             </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------contact----------------------------------------->
+
+<div id="contact">
+ <div class="container">
+
+    <div class="row">
+        <div class="contact-left">
+         <h1>CONTACT ME</h1>
+         <p><i class="fa-solid fa-paper-plane"></i>hemadas1428@gmail.com</p>
+         <p><i class="fa-solid fa-phone"></i>7338601562</p>
+         <div class="social-icons">
+           <a href="https://www.instagram.com/hema_the_versatile?igsh=NWdibmR6N2h0cHp1&utm_source=qr"> <i class="fa-brands fa-square-instagram"></i></a>
+            
+           <a href="https://www.linkedin.com/in/hemavathi-s-13b543232"><i class="fa-brands fa-linkedin"></i></a>
+           
+         </div>
+         <a href="images/hemavathi S resume pdf.pdf" class="button button2">Download CV</a>
+        </div>
+        <div class="contact-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Enter your name" required>
+                <input type="text" name="E-mail" placeholder="Enter your email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="button button2">Submit</button>
+            </form>
+            <span id="mes"></span>
+        </div>
+    </div>
+ </div>
+<div class="copyright">
+    <p>Made  with  <i class="fa-solid fa-heart"></i>  by  Hemavathi S</p>
+</div>
+</div>
+
+
+<script>
+
+var tablinks=document.getElementsByClassName("tab-links");
+var tablecontents=document.getElementsByClassName("table-contents");
+function opentab(tabname)
+{
+    for(tablink of tablinks){
+    tablink.classList.remove("active-link")
+}
+
+
+    for(tablecontent of tablecontents){
+    tablecontent.classList.remove("active-tab")
+}
+
+event.currentTarget.classList.add("active-link");
+document.getElementById(tabname).classList.add("active-tab");
+
+}
+</script>
+<script>
+    var side = document.getElementById("sidemenu");
+    function openmenu()
+    {
+        side.style.right= "0";
+    }
+    function closemenu()
+    {
+        side.style.right= "-200px";
+    }
+</script>
+<script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbwzEuhtfg0V_kQJG3IVtdUeMZnNZRgauz0Nen31nd8DKXbHH3v1giRLr5vm_sq4kHI3/exec>'
+    const form = document.forms['submit-to-google-sheet']
+    const mes=document.getElementById("mes")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            mes.innerHTML = "Message Sent Succesfully"   
+            setTimeout(function()
+            {
+                mes.innerHTML=""
+            },3000)
+            form.reset()
+             })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
+
